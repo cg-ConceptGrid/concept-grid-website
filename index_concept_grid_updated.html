@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171717">
+  <meta name="description" content="CONCEPT GRID — Facade & Signage Solutions. Architectural branding, facade cladding, illuminated signage, shop drawings, fabrication and installation.">
+  <title>CONCEPT GRID | Facade & Signage Solutions</title>
+  <style>
+    :root{--black:#171717;--ink:#222;--gold:#e5c21b;--paper:#f7f7f4;--muted:#b9b9b4;--line:#343434;--white:#fff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--black);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px 0;border-bottom:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.08em}
+    .brand img{width:48px;height:48px;object-fit:contain;background:#fff;border-radius:4px}
+    .brand span{font-size:15px;line-height:1.15}.brand small{display:block;color:var(--gold);font-size:10px;letter-spacing:.12em;margin-top:5px}
+    .navlinks{display:flex;gap:24px;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#deded9}
+    .navlinks a:hover{color:var(--gold)}
+    .hero{min-height:610px;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:54px;padding:76px 0 82px}
+    .eyebrow{color:var(--gold);font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase}
+    h1{font-size:clamp(48px,7vw,88px);line-height:.95;letter-spacing:-.065em;margin:22px 0 24px;text-transform:uppercase}
+    h1 span{color:var(--gold);display:block}
+    .hero p{max-width:510px;color:#c9c9c4;font-size:17px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 19px;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--gold);min-height:48px}
+    .btn.primary{background:var(--gold);color:var(--black)}.btn:hover{transform:translateY(-2px)}
+    .hero-art{position:relative;min-height:420px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(145deg,#343434,#1e1e1e 55%,#111);border:1px solid #3b3b3b}
+    .hero-art:before{content:"";position:absolute;width:76%;height:76%;border:18px solid #0d0d0d;transform:rotate(-8deg);box-shadow:22px 22px 0 rgba(0,0,0,.22)}
+    .hero-art:after{content:"";position:absolute;width:48%;height:48%;border:18px solid var(--gold);transform:translate(15px,10px) rotate(-8deg);opacity:.96}
+    .hero-art img{position:relative;z-index:2;width:70%;max-width:360px;mix-blend-mode:normal;box-shadow:0 20px 50px #0008}
+    .ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:17px 0;color:var(--gold);font-size:11px;letter-spacing:.18em;font-weight:800;text-align:center}
+    section{padding:86px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:34px}
+    h2{font-size:clamp(32px,4.5vw,54px);line-height:1.02;letter-spacing:-.045em;margin:10px 0 0;text-transform:uppercase}
+    .section-head p{max-width:420px;color:#bdbdb7;margin:0}
+    .services{background:var(--paper);color:var(--black)}
+    .services .eyebrow{color:#8e7610}
+    .services .section-head p{color:#555}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#d7d7d1;border:1px solid #d7d7d1}
+    .service{background:var(--paper);padding:28px;min-height:205px}
+    .num{color:#8e7610;font-size:12px;font-weight:900;letter-spacing:.12em}
+    .service h3{font-size:20px;margin:26px 0 9px;text-transform:uppercase;letter-spacing:-.02em}
+    .service p{color:#5c5c56;font-size:14px;margin:0}
+    .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start}
+    .about-copy{color:#c4c4be;font-size:17px}
+    .pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+    .pill{border:1px solid #444;padding:8px 11px;color:#deded8;font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+    .projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .project{min-height:220px;padding:22px;display:flex;flex-direction:column;justify-content:end;background:linear-gradient(135deg,#41413d,#222 60%,#111);border:1px solid #3a3a3a;position:relative;overflow:hidden}
+    .project:before{content:"";position:absolute;width:65%;height:62%;border:10px solid #111;right:-8%;top:-5%;transform:skewY(-10deg)}
+    .project:nth-child(2):before{border-color:var(--gold);width:50%;height:70%;right:8%;top:-18%}
+    .project:nth-child(3):before{border-color:#777;width:75%;height:42%;right:-12%;top:12%;transform:skewY(12deg)}
+    .project:nth-child(4):before{border-color:var(--gold);width:35%;height:90%;right:15%;top:5%;transform:rotate(20deg)}
+    .project span,.project h3{position:relative;z-index:1}.project span{color:var(--gold);font-size:10px;letter-spacing:.16em;text-transform:uppercase}.project h3{font-size:19px;text-transform:uppercase;margin:7px 0 0}
+    .cta{background:var(--gold);color:var(--black);padding:66px 0}
+    .cta-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .cta h2{max-width:700px}
+    .cta .btn{border-color:var(--black);background:var(--black);color:var(--white);white-space:nowrap}
+    footer{padding:30px 0;color:#a9a9a3;font-size:12px}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .footer-brand{color:#fff;font-weight:900;letter-spacing:.1em}.footer-brand b{color:var(--gold)}
+    @media(max-width:800px){.navlinks{gap:12px;font-size:10px}.hero{grid-template-columns:1fr;gap:34px;padding:54px 0}.hero-art{min-height:330px}.section-head,.cta-inner{align-items:flex-start;flex-direction:column}.about-grid{grid-template-columns:1fr;gap:30px}.service-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:520px){.wrap{width:min(100% - 28px,1160px)}.nav{align-items:flex-start}.brand img{width:40px;height:40px}.brand span{font-size:12px}.navlinks{display:none}.hero-art{min-height:280px}.hero-art img{width:78%}section{padding:62px 0}.service-grid,.projects-grid{grid-template-columns:1fr}.service{min-height:170px}.service h3{margin-top:18px}.project{min-height:190px}.footer-inner{align-items:flex-start;flex-direction:column}}
+  
+    [hidden]{display:none!important}
+    .tools{display:flex;gap:8px;align-items:center}
+    .lang,.menu-btn{background:none;color:var(--gold);border:1px solid var(--gold);min-width:44px;min-height:40px;padding:0 12px;font:800 12px Arial,sans-serif;cursor:pointer}
+    .lang:hover{background:var(--gold);color:var(--black)}
+    .menu-btn{display:none;color:#fff;border-color:#555;font-size:20px}
+    .project img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.6)}
+    .contact-btns{display:flex;flex-wrap:wrap;gap:10px;min-width:260px}.contact-btns .alt{flex:1}
+    .cta .btn.wa{padding:0;width:48px;flex:none;color:#25D366}.btn.wa svg{width:26px;height:26px}
+    .cta .btn.alt{background:transparent;color:var(--black)}
+    [dir=rtl] *{letter-spacing:0!important}
+    [dir=rtl] body{font-family:Tahoma,Arial,sans-serif}
+    [dir=rtl] h1,[dir=rtl] h2{line-height:1.25}
+    @media(max-width:800px){.contact-btns{width:100%}}
+    @media(max-width:520px){.menu-btn{display:block}.nav{flex-wrap:wrap;align-items:center}.tools{order:2}.navlinks{order:3;flex-direction:column;width:100%;gap:0;font-size:13px}.nav.open .navlinks{display:flex}.navlinks a{padding:14px 0;border-top:1px solid var(--line)}}
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Concept Grid home">
+        <img src="assets/concept-grid-logo.png" alt="CONCEPT GRID logo">
+        <span>CONCEPT GRID<small>FACADE & SIGNAGE SOLUTIONS</small></span>
+      </a>
+      <div class="navlinks" id="menu">
+        <a href="#services">Services</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+      </div>
+    <div class="tools"><button class="lang" id="lang" type="button">عربي</button><button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu">☰</button></div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="wrap hero">
+      <div>
+        <div class="eyebrow">Design · Engineering · Execution</div>
+        <h1>Ideas built <span>to stand out.</span></h1>
+        <p>We transform concepts into distinctive architectural facades, illuminated signage, and branded spaces — from the first sketch to fabrication and installation.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">Explore our work ↘</a>
+          <a class="btn" href="#contact">Start a project ↗</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Concept Grid visual identity">
+        <img src="assets/concept-grid-logo.png" alt="CONCEPT GRID — Facade & Signage Solutions">
+      </div>
+    </div>
+
+    <div class="ticker">FACADE CLADDING &nbsp; / &nbsp; 3D ILLUMINATED LETTERS &nbsp; / &nbsp; SIGNAGE &nbsp; / &nbsp; INSTALLATION</div>
+
+    <section class="services" id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">What we do</div><h2>One vision.<br>Complete solutions.</h2></div>
+          <p>Creative thinking meets technical precision to build a clear, consistent identity for your space.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service"><div class="num">01 / EXTERIORS</div><h3>Facade Cladding</h3><p>Architectural cladding concepts, detailing, coordination, and installation-ready solutions.</p></article>
+          <article class="service"><div class="num">02 / VISIBILITY</div><h3>Illuminated Signage</h3><p>3D illuminated letters, logo signs, and custom signage built to make brands visible.</p></article>
+          <article class="service"><div class="num">03 / BRAND SPACE</div><h3>Architectural Branding</h3><p>Connecting brand identity with the physical environment through considered design.</p></article>
+          <article class="service"><div class="num">04 / DESIGN</div><h3>Creative Design & 3D</h3><p>Visual concepts, presentations, and realistic visualization to communicate ideas clearly.</p></article>
+          <article class="service"><div class="num">05 / TECHNICAL</div><h3>Shop Drawings</h3><p>Clear technical drawings and fabrication details to support accurate execution.</p></article>
+          <article class="service"><div class="num">06 / DELIVERY</div><h3>Fabrication & Installation</h3><p>Coordinated production and on-site execution focused on quality and finish.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap about-grid">
+        <div><div class="eyebrow">About Concept Grid</div><h2>From concept<br>to construction.</h2></div>
+        <div class="about-copy">
+          <p>CONCEPT GRID is a design-and-execution focused brand for facade and signage solutions. We bring creative direction, technical thinking, and practical production together to help commercial spaces express their identity with confidence.</p>
+          <p>Our approach connects the visual idea with the details that make it buildable — helping projects move from concept to a clear, coordinated result.</p>
+          <div class="pill-row"><span class="pill">Design-led</span><span class="pill">Technical precision</span><span class="pill">Built environments</span><span class="pill">End-to-end thinking</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Selected work</div><h2>Made to be seen.</h2></div>
+          <p>A selection of our facade, signage, and technical work.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project"><img src="assets/projects/1.jpeg" alt="" loading="lazy" onerror="this.remove()"><span>01 / Exterior</span><h3>Facade Cladding</h3></article>
+          <article class="project"><img src="assets/projects/2.jpeg" alt="" loading="lazy" onerror="this.remove()"><span>02 / Signage</span><h3>Illuminated Letters</h3></article>
+          <article class="project"><img src="assets/projects/3.jpg" alt="" loading="lazy" onerror="this.remove()"><span>03 / Spatial</span><h3>Exhibition Design</h3></article>
+          <article class="project"><img src="assets/projects/4.jpeg" alt="" loading="lazy" onerror="this.remove()"><span>04 / OUTDOOR STRUCTURES</span><h3>CLADDING PERGOLAS</h3></article>
+          <article class="project"><img src="assets/projects/5.jpeg" alt="" loading="lazy" onerror="this.remove()"><span>05 / STRUCTURES</span><h3>CANOPY</h3></article>
+          <article class="project"><img src="assets/projects/6.jpeg" alt="" loading="lazy" onerror="this.remove()"><span>06 / RETAIL</span><h3>KIOSK</h3></article>
+          <article class="project"><img src="assets/projects/7.jpeg" alt="" loading="lazy" onerror="this.remove()"><span>07 / COMMERCIAL</span><h3>NEXT & GO</h3></article>
+          <article class="project"><img src="assets/projects/8.jpeg" alt="" loading="lazy" onerror="this.remove()"><span>08 / COMMERCIAL</span><h3>CAR SERVICE</h3></article>
+        </div>
+        <div class="actions"><a class="btn primary" href="https://www.behance.net/tarekhunter" target="_blank" rel="noopener">View full portfolio on Behance ↗</a></div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="wrap cta-inner">
+        <div><div class="eyebrow" style="color:#302900">Have a project in mind?</div><h2>Let's build something distinctive.</h2><p>Tell us what you are planning. Let's discuss the right solution for your space.</p></div>
+        <div class="contact-btns"><a class="btn alt" href="tel:+201003209239">Call us</a><a class="btn alt" href="mailto:cg.official.co@gmail.com">Email us</a><a class="btn wa" id="cWa" href="https://wa.me/201003209239" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path transform="translate(6 6) scale(.5)" fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div class="footer-brand">CONCEPT <b>GRID</b></div>
+      <div>Facade & Signage Solutions</div>
+      <div>© <span id="year">2026</span> CONCEPT GRID. All rights reserved.</div>
+    </div>
+  </footer>
+
+<script>
+(()=>{
+// Arabic text: key = exact English text on the page. If you edit the English, update its key here too.
+const AR={
+"FACADE & SIGNAGE SOLUTIONS":"حلول الواجهات واللافتات",
+"Services":"الخدمات","About":"من نحن","Projects":"المشاريع","Contact":"تواصل",
+"Design · Engineering · Execution":"تصميم · هندسة · تنفيذ",
+"Ideas built":"أفكار مبنية","to stand out.":"لتتميّز.",
+"We transform concepts into distinctive architectural facades, illuminated signage, and branded spaces — from the first sketch to fabrication and installation.":"نحوّل الأفكار إلى واجهات معمارية مميزة ولافتات مضيئة ومساحات تحمل هوية علامتك — من أول رسمة وحتى التصنيع والتركيب.",
+"Explore our work ↘":"استكشف أعمالنا","Start a project ↗":"ابدأ مشروعك",
+"FACADE CLADDING / 3D ILLUMINATED LETTERS / SIGNAGE / INSTALLATION":"تجليد الواجهات / حروف مضيئة ثلاثية الأبعاد / لافتات / قدرة تنفيذية",
+"What we do":"ماذا نقدّم","One vision.":"رؤية واحدة.","Complete solutions.":"حلول متكاملة.",
+"Creative thinking meets technical precision to build a clear, consistent identity for your space.":"تفكير إبداعي ودقة تقنية لبناء هوية واضحة ومتّسقة لمساحتك.",
+"01 / EXTERIORS":"01 / الواجهات","Facade Cladding":"تجليد الواجهات",
+"Architectural cladding concepts, detailing, coordination, and installation-ready solutions.":"أفكار وتفاصيل وتنسيق لأعمال تجليد الواجهات، بحلول جاهزة للتركيب.",
+"02 / VISIBILITY":"02 / الظهور","Illuminated Signage":"اللافتات المضيئة",
+"3D illuminated letters, logo signs, and custom signage built to make brands visible.":"حروف مضيئة ثلاثية الأبعاد ولافتات شعارات ولافتات مخصصة تُظهر علامتك.",
+"03 / BRAND SPACE":"03 / مساحة العلامة","Architectural Branding":"الهوية المعمارية",
+"Connecting brand identity with the physical environment through considered design.":"نربط هوية العلامة بالمكان الحقيقي من خلال تصميم مدروس.",
+"04 / DESIGN":"04 / التصميم","Creative Design & 3D":"التصميم الإبداعي وثلاثي الأبعاد",
+"Visual concepts, presentations, and realistic visualization to communicate ideas clearly.":"أفكار بصرية وعروض ومجسمات واقعية توصّل الفكرة بوضوح.",
+"05 / TECHNICAL":"05 / الجانب الفني","Shop Drawings":"الرسومات التنفيذية",
+"Clear technical drawings and fabrication details to support accurate execution.":"رسومات فنية وتفاصيل تصنيع واضحة لتنفيذ دقيق.",
+"06 / DELIVERY":"06 / التسليم","Fabrication & Installation":"التصنيع والتركيب",
+"Coordinated production and on-site execution focused on quality and finish.":"إنتاج منسّق وتنفيذ في الموقع مع تركيز على الجودة والتشطيب.",
+"About Concept Grid":"عن Concept Grid","From concept":"من الفكرة","to construction.":"إلى التنفيذ.",
+"CONCEPT GRID is a design-and-execution focused brand for facade and signage solutions. We bring creative direction, technical thinking, and practical production together to help commercial spaces express their identity with confidence.":"CONCEPT GRID علامة تركّز على التصميم والتنفيذ في حلول الواجهات واللافتات. نجمع بين الرؤية الإبداعية والتفكير التقني والإنتاج العملي لنساعد المساحات التجارية على التعبير عن هويتها بثقة.",
+"Our approach connects the visual idea with the details that make it buildable — helping projects move from concept to a clear, coordinated result.":"نربط الفكرة البصرية بالتفاصيل التي تجعلها قابلة للتنفيذ، لينتقل المشروع من التصور إلى نتيجة واضحة ومنسّقة.",
+"Design-led":"يقودنا التصميم","Technical precision":"دقة تقنية","Built environments":"البيئات المبنية","End-to-end thinking":"رؤية شاملة من البداية للنهاية",
+"Selected work":"أعمال مختارة","Made to be seen.":"صُنعت لتُرى.",
+"A selection of our facade, signage, and technical work.":"نماذج من أعمالنا في الواجهات واللافتات والرسومات الفنية.",
+"01 / Exterior":"01 / خارجي","02 / Signage":"02 / لافتات","Illuminated Letters":"حروف مضيئة",
+"03 / Spatial":"03 / مساحات","Exhibition Design":"تصميم المعارض",
+"04 / OUTDOOR STRUCTURES":"04 / الهياكل الخارجية","CLADDING PERGOLAS":"تصنيع وتنفيذ البرجولات الكلادينج",
+"05 / STRUCTURES":"05 / الهياكل","CANOPY":"مظلة","06 / RETAIL":"06 / وحدات تجارية","KIOSK":"كشك","07 / COMMERCIAL":"07 / تجاري","08 / COMMERCIAL":"08 / تجاري","COMMERCIAL STORE":"متجر تجاري",
+"View full portfolio on Behance ↗":"شاهد البورتفوليو كاملاً على Behance",
+"Have a project in mind?":"هل لديك مشروع في ذهنك؟","Let's build something distinctive.":"لنبنِ شيئاً مميزاً.",
+"Tell us what you are planning. Let's discuss the right solution for your space.":"أخبرنا بما تخطط له، ولنختر معاً الحل المناسب لمساحتك.",
+"Call us":"اتصل بنا","Email us":"راسلنا بالبريد",
+"Facade & Signage Solutions":"حلول الواجهات واللافتات",
+"CONCEPT GRID. All rights reserved.":"CONCEPT GRID. جميع الحقوق محفوظة."
+};
+const $=id=>document.getElementById(id);
+const norm=t=>t.replace(/[\s\u00a0]+/g," ").trim();
+const nodes=[],tw=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+for(let n;n=tw.nextNode();){const t=AR[norm(n.nodeValue)];if(t)nodes.push([n,n.nodeValue,t])}
+const WA=$("cWa").getAttribute("href");
+const MSG=["Hello CONCEPT GRID, I'd like to discuss a project.","أهلاً CONCEPT GRID، أودّ مناقشة مشروع."];
+function set(ar){
+  const d=document.documentElement;d.lang=ar?"ar":"en";d.dir=ar?"rtl":"ltr";
+  for(const [n,o,t] of nodes)n.nodeValue=ar?o.match(/^\s*/)[0]+t+o.match(/\s*$/)[0]:o;
+  $("lang").textContent=ar?"EN":"عربي";
+  document.title=ar?"CONCEPT GRID | حلول الواجهات واللافتات":"CONCEPT GRID | Facade & Signage Solutions";
+  $("cWa").href=WA+"?text="+encodeURIComponent(MSG[+ar]);
+}
+const nav=document.querySelector(".nav"),mb=$("menuBtn");
+mb.onclick=()=>mb.setAttribute("aria-expanded",nav.classList.toggle("open"));
+document.querySelectorAll("#menu a").forEach(a=>a.onclick=()=>{nav.classList.remove("open");mb.setAttribute("aria-expanded","false")});
+let saved;try{saved=localStorage.getItem("cg-lang")}catch(e){}
+set(saved?saved==="ar":/^ar/i.test(navigator.language||""));
+$("lang").onclick=()=>{const ar=document.documentElement.lang!=="ar";set(ar);try{localStorage.setItem("cg-lang",ar?"ar":"en")}catch(e){}};
+$("year").textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
