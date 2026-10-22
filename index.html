@@ -1,245 +1,480 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#171717">
-  <meta name="description" content="CONCEPT GRID — Facade & Signage Solutions. Architectural branding, facade cladding, illuminated signage, shop drawings, fabrication and installation.">
-  <title>CONCEPT GRID | Facade & Signage Solutions</title>
+  <meta name="theme-color" content="#f5f3ed">
+  <meta name="description" content="CONCEPT GRID connects architectural facade systems, illuminated signage, shop drawings, fabrication and installation in one design-led process.">
+  <meta property="og:title" content="CONCEPT GRID — Built to make a mark">
+  <meta property="og:description" content="Architectural facades, illuminated signage and branded spaces. From concept to built form.">
+  <meta property="og:type" content="website">
+  <title>CONCEPT GRID — Built to make a mark</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{--black:#171717;--ink:#222;--gold:#e5c21b;--paper:#f7f7f4;--muted:#b9b9b4;--line:#343434;--white:#fff}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--black);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+    :root {
+      color-scheme: light;
+      --ink: #171916;
+      --ink-2: #242720;
+      --paper: #f5f3ed;
+      --paper-2: #ebe9e1;
+      --muted: #696c64;
+      --line: #d7d5cb;
+      --line-dark: #42453e;
+      --accent: #e5c21b;
+      --accent-deep: #b99b00;
+      --white: #fff;
+      --wrap: 1240px;
+      --ease: cubic-bezier(.2,.75,.25,1);
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:92px}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",Arial,Helvetica,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+    img{display:block;max-width:100%}
     a{color:inherit;text-decoration:none}
-    .wrap{width:min(1160px,calc(100% - 40px));margin:auto}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px 0;border-bottom:1px solid var(--line)}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.08em}
-    .brand img{width:48px;height:48px;object-fit:contain;background:#fff;border-radius:4px}
-    .brand span{font-size:15px;line-height:1.15}.brand small{display:block;color:var(--gold);font-size:10px;letter-spacing:.12em;margin-top:5px}
-    .navlinks{display:flex;gap:24px;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#deded9}
-    .navlinks a:hover{color:var(--gold)}
-    .hero{min-height:610px;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:54px;padding:76px 0 82px}
-    .eyebrow{color:var(--gold);font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase}
-    h1{font-size:clamp(48px,7vw,88px);line-height:.95;letter-spacing:-.065em;margin:22px 0 24px;text-transform:uppercase}
-    h1 span{color:var(--gold);display:block}
-    .hero p{max-width:510px;color:#c9c9c4;font-size:17px}
-    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 19px;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--gold);min-height:48px}
-    .btn.primary{background:var(--gold);color:var(--black)}.btn:hover{transform:translateY(-2px)}
-    .hero-art{position:relative;min-height:420px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(145deg,#343434,#1e1e1e 55%,#111);border:1px solid #3b3b3b}
-    .hero-art:before{content:"";position:absolute;width:76%;height:76%;border:18px solid #0d0d0d;transform:rotate(-8deg);box-shadow:22px 22px 0 rgba(0,0,0,.22)}
-    .hero-art:after{content:"";position:absolute;width:48%;height:48%;border:18px solid var(--gold);transform:translate(15px,10px) rotate(-8deg);opacity:.96}
-    .hero-art img{position:relative;z-index:2;width:70%;max-width:360px;mix-blend-mode:normal;box-shadow:0 20px 50px #0008}
-    .ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:17px 0;color:var(--gold);font-size:11px;letter-spacing:.18em;font-weight:800;text-align:center}
-    section{padding:86px 0}
-    .section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:34px}
-    h2{font-size:clamp(32px,4.5vw,54px);line-height:1.02;letter-spacing:-.045em;margin:10px 0 0;text-transform:uppercase}
-    .section-head p{max-width:420px;color:#bdbdb7;margin:0}
-    .services{background:var(--paper);color:var(--black)}
-    .services .eyebrow{color:#8e7610}
-    .services .section-head p{color:#555}
-    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#d7d7d1;border:1px solid #d7d7d1}
-    .service{background:var(--paper);padding:28px;min-height:205px}
-    .num{color:#8e7610;font-size:12px;font-weight:900;letter-spacing:.12em}
-    .service h3{font-size:20px;margin:26px 0 9px;text-transform:uppercase;letter-spacing:-.02em}
-    .service p{color:#5c5c56;font-size:14px;margin:0}
-    .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start}
-    .about-copy{color:#c4c4be;font-size:17px}
-    .pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
-    .pill{border:1px solid #444;padding:8px 11px;color:#deded8;font-size:11px;text-transform:uppercase;letter-spacing:.06em}
-    .projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    .project{min-height:220px;padding:22px;display:flex;flex-direction:column;justify-content:end;background:linear-gradient(135deg,#41413d,#222 60%,#111);border:1px solid #3a3a3a;position:relative;overflow:hidden}
-    .project:before{content:"";position:absolute;width:65%;height:62%;border:10px solid #111;right:-8%;top:-5%;transform:skewY(-10deg)}
-    .project:nth-child(2):before{border-color:var(--gold);width:50%;height:70%;right:8%;top:-18%}
-    .project:nth-child(3):before{border-color:#777;width:75%;height:42%;right:-12%;top:12%;transform:skewY(12deg)}
-    .project:nth-child(4):before{border-color:var(--gold);width:35%;height:90%;right:15%;top:5%;transform:rotate(20deg)}
-    .project span,.project h3{position:relative;z-index:1}.project span{color:var(--gold);font-size:10px;letter-spacing:.16em;text-transform:uppercase}.project h3{font-size:19px;text-transform:uppercase;margin:7px 0 0}
-    .cta{background:var(--gold);color:var(--black);padding:66px 0}
-    .cta-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
-    .cta h2{max-width:700px}
-    .cta .btn{border-color:var(--black);background:var(--black);color:var(--white);white-space:nowrap}
-    footer{padding:30px 0;color:#a9a9a3;font-size:12px}
-    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .footer-brand{color:#fff;font-weight:900;letter-spacing:.1em}.footer-brand b{color:var(--gold)}
-    @media(max-width:800px){.navlinks{gap:12px;font-size:10px}.hero{grid-template-columns:1fr;gap:34px;padding:54px 0}.hero-art{min-height:330px}.section-head,.cta-inner{align-items:flex-start;flex-direction:column}.about-grid{grid-template-columns:1fr;gap:30px}.service-grid{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:520px){.wrap{width:min(100% - 28px,1160px)}.nav{align-items:flex-start}.brand img{width:40px;height:40px}.brand span{font-size:12px}.navlinks{display:none}.hero-art{min-height:280px}.hero-art img{width:78%}section{padding:62px 0}.service-grid,.projects-grid{grid-template-columns:1fr}.service{min-height:170px}.service h3{margin-top:18px}.project{min-height:190px}.footer-inner{align-items:flex-start;flex-direction:column}}
-  
-    [hidden]{display:none!important}
-    .tools{display:flex;gap:8px;align-items:center}
-    .lang,.menu-btn{background:none;color:var(--gold);border:1px solid var(--gold);min-width:44px;min-height:40px;padding:0 12px;font:800 12px Arial,sans-serif;cursor:pointer}
-    .lang:hover{background:var(--gold);color:var(--black)}
-    .menu-btn{display:none;color:#fff;border-color:#555;font-size:20px}
-    .project img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.6)}
-    .contact-btns{display:flex;flex-wrap:wrap;gap:10px;min-width:260px}.contact-btns .alt{flex:1}
-    .cta .btn.wa{padding:0;width:48px;flex:none;color:#25D366}.btn.wa svg{width:26px;height:26px}
-    .cta .btn.alt{background:transparent;color:var(--black)}
-    [dir=rtl] *{letter-spacing:0!important}
-    [dir=rtl] body{font-family:Tahoma,Arial,sans-serif}
-    [dir=rtl] h1,[dir=rtl] h2{line-height:1.25}
-    @media(max-width:800px){.contact-btns{width:100%}}
-    @media(max-width:520px){.menu-btn{display:block}.nav{flex-wrap:wrap;align-items:center}.tools{order:2}.navlinks{order:3;flex-direction:column;width:100%;gap:0;font-size:13px}.nav.open .navlinks{display:flex}.navlinks a{padding:14px 0;border-top:1px solid var(--line)}}
+    button,a{-webkit-tap-highlight-color:transparent}
+    button{font:inherit}
+    .wrap{width:min(var(--wrap),calc(100% - 64px));margin-inline:auto}
+    .topline{background:var(--ink);color:#e7e7df;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+    .topline .wrap{min-height:31px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .topline span:last-child{color:var(--accent)}
+    .site-header{position:sticky;top:0;z-index:20;background:rgba(245,243,237,.94);backdrop-filter:blur(18px);border-bottom:1px solid rgba(23,25,22,.11)}
+    .nav{min-height:83px;display:flex;align-items:center;justify-content:space-between;gap:32px}
+    .brand{display:inline-flex;align-items:center;gap:12px;min-width:235px}
+    .brand img{width:47px;height:47px;object-fit:contain;background:#fff}
+    .brand-word{font-family:Manrope,Arial,sans-serif;font-size:14px;line-height:1.18;font-weight:800;letter-spacing:.075em}
+    .brand-word small{display:block;margin-top:5px;font-family:"DM Sans",Arial,sans-serif;font-size:8px;font-weight:700;letter-spacing:.15em;color:#65675e}
+    .navlinks{display:flex;align-items:center;gap:clamp(16px,2.6vw,36px)}
+    .navlinks a{position:relative;padding:10px 0;color:#4a4d46;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:color .2s ease}
+    .navlinks a::after{content:"";position:absolute;left:0;right:100%;bottom:3px;height:2px;background:var(--accent);transition:right .25s var(--ease)}
+    .navlinks a:hover{color:var(--ink)}
+    .navlinks a:hover::after{right:0}
+    .navtools{display:flex;align-items:center;gap:10px}
+    .lang,.menu-btn{min-width:43px;height:43px;border:1px solid var(--line);background:transparent;color:var(--ink);font-weight:800;font-size:11px;cursor:pointer}
+    .lang:hover{border-color:var(--ink);background:var(--ink);color:#fff}
+    .menu-btn{display:none;font-size:20px}
+    .hero{padding:58px 0 48px;display:grid;grid-template-columns:minmax(0,.93fr) minmax(0,1.07fr);gap:clamp(38px,6vw,88px);align-items:center;min-height:650px}
+    .eyebrow{display:flex;align-items:center;gap:11px;color:#6a6c62;font-size:10px;font-weight:800;letter-spacing:.19em;text-transform:uppercase}
+    .eyebrow::before{content:"";width:28px;height:2px;flex:0 0 auto;background:var(--accent-deep)}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,h3{font-family:Manrope,"DM Sans",Arial,sans-serif}
+    h1{max-width:660px;margin:22px 0 22px;font-size:clamp(47px,6.4vw,91px);line-height:.99;letter-spacing:-.075em;font-weight:800}
+    h1 em{font-style:normal;display:block}
+    h1 .accent-word{position:relative;z-index:0;width:max-content;max-width:100%}
+    h1 .accent-word::after{content:"";position:absolute;z-index:-1;left:-3px;right:-8px;bottom:2px;height:18px;background:var(--accent);opacity:.9}
+    .hero-copy{max-width:540px;margin-bottom:0;color:#595d55;font-size:16px;line-height:1.85}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:29px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:15px;min-height:52px;padding:0 20px;border:1px solid var(--ink);font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;transition:background .2s ease,color .2s ease,transform .2s ease,border-color .2s ease}
+    .btn .arrow{font-size:17px;line-height:1}
+    .btn-primary{background:var(--ink);color:var(--paper)}
+    .btn-primary:hover{background:var(--accent);border-color:var(--accent);color:var(--ink);transform:translateY(-2px)}
+    .btn-secondary{background:transparent;color:var(--ink)}
+    .btn-secondary:hover{background:var(--ink);color:var(--paper);transform:translateY(-2px)}
+    .hero-visual{position:relative;min-width:0;isolation:isolate}
+    .hero-photo{height:clamp(390px,42vw,555px);position:relative;overflow:hidden;background:#c2c2b8}
+    .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,14,12,.45),transparent 48%)}
+    .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .7s var(--ease)}
+    .hero-visual:hover .hero-photo img{transform:scale(1.025)}
+    .hero-outline{position:absolute;z-index:-1;top:-18px;right:-18px;width:54%;height:51%;border:1px solid var(--accent-deep)}
+    .hero-corner{position:absolute;top:28px;left:-22px;width:44px;height:44px;border-top:2px solid var(--accent);border-left:2px solid var(--accent)}
+    .hero-caption{position:absolute;z-index:2;left:25px;right:25px;bottom:20px;display:flex;align-items:end;justify-content:space-between;gap:18px;color:#fff}
+    .hero-caption small{display:block;font-size:9px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#e7e6df}
+    .hero-caption strong{display:block;margin-top:4px;font:700 17px Manrope,Arial,sans-serif}
+    .hero-caption .index{font:600 12px Manrope,Arial,sans-serif;color:var(--accent)}
+    .hero-inset{position:absolute;z-index:3;left:-44px;bottom:76px;width:37%;min-width:145px;height:153px;border:7px solid var(--paper);background:var(--paper);box-shadow:0 18px 45px #1112;overflow:hidden}
+    .hero-inset img{width:100%;height:100%;object-fit:cover}
+    .hero-stamp{position:absolute;z-index:4;right:-14px;top:28px;padding:12px 15px;background:var(--accent);font-size:9px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;writing-mode:vertical-rl;transform:rotate(180deg)}
+    .hero-meta{padding:20px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;border-top:1px solid var(--line)}
+    .hero-meta div{display:flex;align-items:center;gap:10px;color:#565950;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .hero-meta span{display:inline-grid;place-items:center;width:28px;height:28px;border:1px solid var(--line);font-size:10px;color:#7b7d72}
+    .marquee{background:var(--accent);overflow:hidden}
+    .marquee .wrap{min-height:58px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .marquee span{font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+    .marquee .dot{font-size:17px;font-weight:400}
+    section{scroll-margin-top:90px}
+    .section{padding:104px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:36px;margin-bottom:43px}
+    .section-head h2{margin:13px 0 0;font-size:clamp(34px,4.6vw,59px);font-weight:800;letter-spacing:-.065em;line-height:1.04}
+    .section-head p{max-width:400px;margin:0;color:var(--muted);font-size:14px;line-height:1.85}
+    .services{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #cfcdc2;border-left:1px solid #cfcdc2}
+    .service{position:relative;display:flex;flex-direction:column;min-height:232px;padding:27px 27px 25px;border-right:1px solid #cfcdc2;border-bottom:1px solid #cfcdc2;transition:background .25s ease,transform .25s var(--ease)}
+    .service:hover{z-index:1;background:var(--paper);transform:translateY(-3px)}
+    .service-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .service-num{color:#77796f;font-size:10px;font-weight:800;letter-spacing:.13em}
+    .service-mark{width:32px;height:32px;display:grid;place-items:center;border:1px solid #c8c6bb;font:700 15px Manrope,Arial,sans-serif}
+    .service h3{margin:29px 0 10px;font-size:17px;font-weight:800;line-height:1.3;letter-spacing:-.03em}
+    .service p{margin:0;color:#64675e;font-size:12px;line-height:1.8}
+    .about{background:var(--ink);color:var(--paper)}
+    .about-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(40px,7vw,100px);align-items:center}
+    .about .eyebrow{color:#c1c3b9}
+    .about h2{margin:16px 0 24px;font-size:clamp(39px,5vw,65px);font-weight:800;line-height:1.04;letter-spacing:-.065em}
+    .about h2 em{display:block;font-style:normal;color:var(--accent)}
+    .about-copy{color:#c3c5bc;font-size:14px;line-height:1.95}
+    .about-copy p{margin-bottom:17px}
+    .tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:27px}
+    .tag{padding:9px 11px;border:1px solid #44473f;color:#e5e6de;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .about-visual{position:relative;min-height:430px;background:#353831}
+    .about-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.78)}
+    .about-visual::after{content:"";position:absolute;inset:16px;border:1px solid #ffffff65;pointer-events:none}
+    .about-index{position:absolute;z-index:2;left:-18px;bottom:26px;padding:18px 20px;background:var(--accent);color:var(--ink)}
+    .about-index strong{display:block;font:800 30px Manrope,Arial,sans-serif;letter-spacing:-.06em}
+    .about-index span{font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    .projects{background:var(--ink);color:var(--paper);padding-top:96px}
+    .projects .section-head{align-items:end}
+    .projects .eyebrow{color:#c5c7bd}
+    .projects .section-head p{color:#b5b8ae}
+    .projects .section-head h2 em{font-style:normal;color:var(--accent)}
+    .project-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:13px}
+    .project{position:relative;min-width:0;min-height:270px;overflow:hidden;background:#353831}
+    .project:nth-child(1),.project:nth-child(2){min-height:390px}
+    .project:nth-child(1){grid-column:span 7}
+    .project:nth-child(2){grid-column:span 5}
+    .project:nth-child(3),.project:nth-child(4),.project:nth-child(5){grid-column:span 4}
+    .project:nth-child(6){grid-column:span 5}
+    .project:nth-child(7){grid-column:span 4}
+    .project:nth-child(8){grid-column:span 3}
+    .project img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .65s var(--ease),filter .35s ease;filter:brightness(.77)}
+    .project::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,12,10,.88),rgba(10,12,10,.08) 65%,rgba(10,12,10,.12));transition:opacity .3s ease}
+    .project:hover img{transform:scale(1.055);filter:brightness(.9)}
+    .project:hover::after{opacity:.88}
+    .project-info{position:absolute;z-index:2;left:20px;right:20px;bottom:20px}
+    .project-info span{display:block;margin-bottom:7px;color:var(--accent);font-size:9px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+    .project-info h3{margin:0;font-size:clamp(15px,1.8vw,21px);font-weight:800;letter-spacing:-.035em;line-height:1.25}
+    .project-arrow{position:absolute;z-index:2;right:18px;top:18px;width:33px;height:33px;display:grid;place-items:center;border:1px solid #ffffff80;color:#fff;opacity:0;transform:translateY(4px);transition:opacity .25s ease,transform .25s ease}
+    .project:hover .project-arrow{opacity:1;transform:translateY(0)}
+    .projects-foot{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:28px;padding-top:22px;border-top:1px solid var(--line-dark)}
+    .projects-foot p{margin:0;color:#b5b8ae;font-size:12px}
+    .projects-foot .btn{border-color:#65685f;color:var(--paper)}
+    .projects-foot .btn:hover{background:var(--accent);border-color:var(--accent);color:var(--ink)}
+    .process{background:var(--paper);color:var(--ink)}
+    .process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .process-step{padding:26px 28px 30px 0}
+    .process-step+.process-step{padding-left:28px;border-left:1px solid var(--line)}
+    .step-label{display:flex;align-items:center;gap:12px;color:#6c6f65;font-size:9px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
+    .step-label span{display:grid;place-items:center;width:30px;height:30px;border:1px solid var(--line);color:var(--ink);font-size:10px}
+    .process-step h3{margin:24px 0 10px;font-size:20px;letter-spacing:-.04em}
+    .process-step p{max-width:310px;margin:0;color:var(--muted);font-size:12px;line-height:1.9}
+    .contact{position:relative;overflow:hidden;background:var(--accent);color:var(--ink);padding:82px 0}
+    .contact::before,.contact::after{content:"";position:absolute;pointer-events:none;border:1px solid rgba(23,25,22,.19);transform:rotate(-26deg)}
+    .contact::before{width:440px;height:210px;right:-65px;top:-80px}
+    .contact::after{width:370px;height:160px;right:-15px;top:-47px}
+    .contact-grid{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:35px}
+    .contact .eyebrow{color:#504812}
+    .contact h2{max-width:700px;margin:15px 0 12px;font-size:clamp(36px,5vw,62px);line-height:1.03;letter-spacing:-.065em}
+    .contact p{margin:0;color:#3f3d2c;font-size:14px}
+    .contact-actions{display:flex;flex-wrap:wrap;gap:9px;max-width:350px}
+    .contact-actions .btn{border-color:var(--ink);white-space:nowrap}
+    .contact-actions .btn-dark{background:var(--ink);color:var(--paper)}
+    .contact-actions .btn-dark:hover{background:transparent;color:var(--ink)}
+    .contact-actions .btn-outline{background:transparent;color:var(--ink)}
+    .contact-actions .btn-outline:hover{background:var(--ink);color:var(--paper)}
+    .site-footer{background:var(--ink);color:var(--paper);padding:35px 0 24px}
+    .footer-main{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;padding-bottom:30px}
+    .footer-main p{max-width:390px;margin:12px 0 0;color:#b8bbb1;font-size:12px}
+    .footer-links{display:flex;flex-wrap:wrap;gap:9px}
+    .footer-links a{display:inline-flex;align-items:center;min-height:40px;padding:0 13px;border:1px solid #42453e;color:#dfe0d8;font-size:10px;font-weight:700;letter-spacing:.07em}
+    .footer-links a:hover{border-color:var(--accent);color:var(--accent)}
+    .footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:20px;border-top:1px solid var(--line-dark);color:#989c91;font-size:10px}
+    .footer-bottom strong{color:#fff;letter-spacing:.12em}
+    :focus-visible{outline:3px solid var(--accent-deep);outline-offset:4px}
+    html[dir="rtl"] body{font-family:"DM Sans",Tahoma,Arial,sans-serif}
+    html[dir="rtl"] .eyebrow::before{order:2}
+    html[dir="rtl"] .hero-caption{direction:rtl}
+    html[dir="rtl"] .hero-outline{right:auto;left:-18px}
+    html[dir="rtl"] .hero-corner{left:auto;right:-22px;border-left:0;border-right:2px solid var(--accent)}
+    html[dir="rtl"] .hero-inset{left:auto;right:-44px}
+    html[dir="rtl"] .hero-stamp{right:auto;left:-14px;transform:none;writing-mode:vertical-rl}
+    html[dir="rtl"] .about-index{left:auto;right:-18px}
+    html[dir="rtl"] .project-info{text-align:right}
+    html[dir="rtl"] .project-arrow{right:auto;left:18px}
+    html[dir="rtl"] .process-step{padding:26px 0 30px 28px}
+    html[dir="rtl"] .process-step+.process-step{padding-left:0;padding-right:28px;border-left:0;border-right:1px solid var(--line)}
+    @media(min-width:1500px){.hero{padding-top:72px;padding-bottom:58px}}
+    @media(max-width:980px){
+      .wrap{width:min(var(--wrap),calc(100% - 42px))}
+      .nav{gap:16px}.brand{min-width:auto}.brand img{width:42px;height:42px}
+      .navlinks{gap:15px}.navlinks a{font-size:10px}
+      .hero{min-height:0;grid-template-columns:1fr 1fr;gap:33px;padding:45px 0}
+      h1{font-size:clamp(43px,6.4vw,68px)}
+      .hero-inset{left:-25px;width:34%;height:125px;bottom:55px}
+      html[dir="rtl"] .hero-inset{left:auto;right:-25px}
+      .section{padding:78px 0}
+      .project:nth-child(1),.project:nth-child(2){min-height:315px}
+      .project{min-height:235px}
+    }
+    @media(max-width:720px){
+      html{scroll-padding-top:74px}
+      .wrap{width:calc(100% - 36px)}
+      .topline .wrap{min-height:29px;font-size:8px;letter-spacing:.11em}
+      .topline span:last-child{display:none}
+      .nav{min-height:73px;flex-wrap:wrap;gap:10px;padding:12px 0}
+      .brand img{width:39px;height:39px}.brand-word{font-size:12px}.brand-word small{font-size:7px}
+      .navtools{margin-left:auto}.menu-btn{display:block;min-width:42px;height:42px}
+      .navlinks{display:none;order:5;width:100%;padding:7px 0 5px;flex-direction:column;align-items:stretch;gap:0}
+      .nav.is-open .navlinks{display:flex}
+      .navlinks a{padding:13px 2px;border-top:1px solid var(--line);font-size:11px}
+      .navlinks a::after{display:none}
+      .hero{grid-template-columns:1fr;gap:31px;padding:42px 0 29px}
+      .hero-copy{font-size:14px;line-height:1.8}
+      h1{font-size:clamp(46px,12vw,74px);margin:18px 0}
+      .hero-photo{height:clamp(315px,94vw,485px)}
+      .hero-outline{top:-10px;right:-10px}
+      html[dir="rtl"] .hero-outline{right:auto;left:-10px}
+      .hero-inset{left:-10px;bottom:45px;width:34%;min-width:125px;height:112px;border-width:5px}
+      html[dir="rtl"] .hero-inset{left:auto;right:-10px}
+      .hero-stamp{right:-6px;top:18px;font-size:8px}
+      html[dir="rtl"] .hero-stamp{right:auto;left:-6px}
+      .hero-meta{gap:8px}.hero-meta div{align-items:flex-start;gap:7px;font-size:8px;line-height:1.4;letter-spacing:.04em}.hero-meta span{width:24px;height:24px;flex-shrink:0}
+      .marquee .wrap{justify-content:flex-start;overflow:hidden;min-height:49px;gap:16px}
+      .marquee span{font-size:8px;letter-spacing:.1em}
+      .marquee span:nth-of-type(2n){display:none}
+      .section{padding:66px 0}
+      .section-head{align-items:flex-start;flex-direction:column;gap:17px;margin-bottom:28px}
+      .section-head h2{font-size:clamp(34px,9vw,49px)}
+      .section-head p{font-size:13px}
+      .service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .service{padding:21px 17px;min-height:222px}
+      .service h3{font-size:15px;margin-top:23px}
+      .service p{font-size:11px}
+      .about-grid{grid-template-columns:1fr;gap:30px}
+      .about h2{font-size:clamp(42px,10vw,59px)}
+      .about-visual{min-height:340px}
+      .about-index{left:-7px;bottom:17px;padding:13px 15px}
+      html[dir="rtl"] .about-index{left:auto;right:-7px}
+      .project-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+      .project,.project:nth-child(1),.project:nth-child(2){grid-column:span 1;min-height:250px}
+      .project:nth-child(1),.project:nth-child(4),.project:nth-child(7){grid-column:span 2;min-height:305px}
+      .project-info{left:14px;right:14px;bottom:15px}
+      .project-info h3{font-size:16px}
+      .project-info span{font-size:8px}
+      .project-arrow{display:none}
+      .projects-foot{align-items:flex-start;flex-direction:column}
+      .process-grid{grid-template-columns:1fr}
+      .process-step,.process-step+.process-step{padding:22px 0;border-left:0;border-right:0;border-bottom:1px solid var(--line)}
+      html[dir="rtl"] .process-step,html[dir="rtl"] .process-step+.process-step{padding:22px 0;border-right:0}
+      .process-step:last-child{border-bottom:0}
+      .process-step h3{margin-top:17px}
+      .contact{padding:65px 0}
+      .contact-grid{align-items:flex-start;flex-direction:column;gap:26px}
+      .contact h2{font-size:clamp(40px,10vw,57px)}
+      .contact-actions{max-width:none}
+      .footer-main{grid-template-columns:1fr;gap:24px}
+      .footer-bottom{align-items:flex-start;flex-direction:column;gap:9px}
+    }
+    @media(max-width:390px){
+      .brand-word{font-size:11px}
+      .service{padding:18px 13px}
+      .hero-actions .btn{width:100%}
+      .project,.project:nth-child(1),.project:nth-child(2),.project:nth-child(4),.project:nth-child(7){min-height:225px}
+      .project:nth-child(1),.project:nth-child(4),.project:nth-child(7){min-height:270px}
+      .contact-actions{width:100%;display:grid;grid-template-columns:1fr}
+    }
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+    }
   </style>
 </head>
 <body>
-  <header class="wrap">
-    <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="#top" aria-label="Concept Grid home">
+  <div class="topline">
+    <div class="wrap"><span>Architecture / Identity / Execution</span><span>Designed to be built.</span></div>
+  </div>
+  <header class="site-header">
+    <nav class="nav wrap" id="siteNav" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="CONCEPT GRID home">
         <img src="assets/concept-grid-logo.png" alt="CONCEPT GRID logo">
-        <span>CONCEPT GRID<small>FACADE & SIGNAGE SOLUTIONS</small></span>
+        <span class="brand-word">CONCEPT GRID<small data-en="FACADE & SIGNAGE SOLUTIONS" data-ar="حلول الواجهات واللافتات">FACADE & SIGNAGE SOLUTIONS</small></span>
       </a>
       <div class="navlinks" id="menu">
-        <a href="#services">Services</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+        <a href="#services" data-en="Capabilities" data-ar="خدماتنا">Capabilities</a>
+        <a href="#about" data-en="Approach" data-ar="منهجنا">Approach</a>
+        <a href="#projects" data-en="Selected work" data-ar="أعمال مختارة">Selected work</a>
+        <a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a>
       </div>
-    <div class="tools"><button class="lang" id="lang" type="button">عربي</button><button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu">☰</button></div>
+      <div class="navtools">
+        <button class="lang" id="langBtn" type="button" aria-label="Switch language">عربي</button>
+        <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu">☰</button>
+      </div>
     </nav>
   </header>
 
   <main id="top">
-    <div class="wrap hero">
-      <div>
-        <div class="eyebrow">Design · Engineering · Execution</div>
-        <h1>Ideas built <span>to stand out.</span></h1>
-        <p>We transform concepts into distinctive architectural facades, illuminated signage, and branded spaces — from the first sketch to fabrication and installation.</p>
-        <div class="actions">
-          <a class="btn primary" href="#projects">Explore our work ↘</a>
-          <a class="btn" href="#contact">Start a project ↗</a>
+    <section class="hero wrap" aria-labelledby="heroTitle">
+      <div class="hero-content">
+        <div class="eyebrow" data-en="Design · Engineering · Execution" data-ar="تصميم · هندسة · تنفيذ">Design · Engineering · Execution</div>
+        <h1 id="heroTitle"><span data-en="Architecture," data-ar="العمارة،">Architecture,</span><em data-en="made tangible." data-ar="تصبح واقعاً." class="accent-word">made tangible.</em></h1>
+        <p class="hero-copy" data-en="We turn ideas into distinctive facades, illuminated signage and branded spaces — connecting creative direction with technical detail and on-site execution." data-ar="نحوّل الأفكار إلى واجهات مميزة ولافتات مضيئة ومساحات تحمل هوية العلامة التجارية، من خلال الجمع بين الرؤية الإبداعية والتفاصيل الفنية والتنفيذ في الموقع.">We turn ideas into distinctive facades, illuminated signage and branded spaces — connecting creative direction with technical detail and on-site execution.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects"><span data-en="Explore selected work" data-ar="استكشف أعمالنا">Explore selected work</span><span class="arrow" aria-hidden="true">↘</span></a>
+          <a class="btn btn-secondary" href="#contact"><span data-en="Start a project" data-ar="ابدأ مشروعاً">Start a project</span><span class="arrow" aria-hidden="true">↗</span></a>
         </div>
       </div>
-      <div class="hero-art" aria-label="Concept Grid visual identity">
-        <img src="assets/concept-grid-logo.png" alt="CONCEPT GRID — Facade & Signage Solutions">
+      <div class="hero-visual">
+        <div class="hero-outline"></div><div class="hero-corner"></div>
+        <div class="hero-photo">
+          <img src="assets/projects/1.jpeg" alt="Architectural facade and exterior branding project" fetchpriority="high">
+          <div class="hero-caption">
+            <div><small data-en="Selected project / 01" data-ar="مشروع مختار / 01">Selected project / 01</small><strong data-en="Built environments" data-ar="مساحات مبنية بهوية">Built environments</strong></div>
+            <span class="index">CG—01</span>
+          </div>
+        </div>
+        <div class="hero-inset"><img src="assets/projects/2.jpeg" alt="Detail of signage and branded facade" loading="lazy"></div>
+        <div class="hero-stamp" data-en="Concept to built form" data-ar="من الفكرة إلى التنفيذ">Concept to built form</div>
+      </div>
+      <div class="hero-meta" aria-label="Our approach">
+        <div><span>01</span><b data-en="Think strategically" data-ar="تفكير استراتيجي">Think strategically</b></div>
+        <div><span>02</span><b data-en="Detail precisely" data-ar="دقة في التفاصيل">Detail precisely</b></div>
+        <div><span>03</span><b data-en="Build confidently" data-ar="تنفيذ بثقة">Build confidently</b></div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-label="Core services">
+      <div class="wrap">
+        <span data-en="Facade cladding" data-ar="تجليد الواجهات">Facade cladding</span><span class="dot">✳</span>
+        <span data-en="Illuminated signage" data-ar="لافتات مضيئة">Illuminated signage</span><span class="dot">✳</span>
+        <span data-en="Architectural branding" data-ar="هوية معمارية">Architectural branding</span><span class="dot">✳</span>
+        <span data-en="Fabrication & installation" data-ar="تصنيع وتركيب">Fabrication & installation</span>
       </div>
     </div>
 
-    <div class="ticker">FACADE CLADDING &nbsp; / &nbsp; 3D ILLUMINATED LETTERS &nbsp; / &nbsp; SIGNAGE &nbsp; / &nbsp; INSTALLATION</div>
-
-    <section class="services" id="services">
+    <section class="section services" id="services">
       <div class="wrap">
         <div class="section-head">
-          <div><div class="eyebrow">What we do</div><h2>One vision.<br>Complete solutions.</h2></div>
-          <p>Creative thinking meets technical precision to build a clear, consistent identity for your space.</p>
+          <div><div class="eyebrow" data-en="What we bring together" data-ar="حلول متكاملة">What we bring together</div><h2 data-en="One vision. Every detail." data-ar="رؤية واحدة. كل التفاصيل.">One vision. Every detail.</h2></div>
+          <p data-en="One coordinated team for the creative, technical and physical details that give a commercial space its presence." data-ar="فريق متكامل يربط الجوانب الإبداعية والفنية والتنفيذية ليمنح المساحات التجارية حضورها المميز.">One coordinated team for the creative, technical and physical details that give a commercial space its presence.</p>
         </div>
         <div class="service-grid">
-          <article class="service"><div class="num">01 / EXTERIORS</div><h3>Facade Cladding</h3><p>Architectural cladding concepts, detailing, coordination, and installation-ready solutions.</p></article>
-          <article class="service"><div class="num">02 / VISIBILITY</div><h3>Illuminated Signage</h3><p>3D illuminated letters, logo signs, and custom signage built to make brands visible.</p></article>
-          <article class="service"><div class="num">03 / BRAND SPACE</div><h3>Architectural Branding</h3><p>Connecting brand identity with the physical environment through considered design.</p></article>
-          <article class="service"><div class="num">04 / DESIGN</div><h3>Creative Design & 3D</h3><p>Visual concepts, presentations, and realistic visualization to communicate ideas clearly.</p></article>
-          <article class="service"><div class="num">05 / TECHNICAL</div><h3>Shop Drawings</h3><p>Clear technical drawings and fabrication details to support accurate execution.</p></article>
-          <article class="service"><div class="num">06 / DELIVERY</div><h3>Fabrication & Installation</h3><p>Coordinated production and on-site execution focused on quality and finish.</p></article>
+          <article class="service"><div class="service-top"><span class="service-num">01 / EXTERIORS</span><span class="service-mark" aria-hidden="true">↗</span></div><h3 data-en="Facade cladding" data-ar="تجليد الواجهات">Facade cladding</h3><p data-en="Architectural panel systems, clean junctions and considered exterior finishes." data-ar="أنظمة ألواح معمارية وتفاصيل دقيقة وتشطيبات خارجية مدروسة.">Architectural panel systems, clean junctions and considered exterior finishes.</p></article>
+          <article class="service"><div class="service-top"><span class="service-num">02 / VISIBILITY</span><span class="service-mark" aria-hidden="true">✳</span></div><h3 data-en="Illuminated signage" data-ar="اللافتات المضيئة">Illuminated signage</h3><p data-en="Dimensional letters, logo signs and lighting designed for clear visibility." data-ar="حروف بارزة ولافتات شعارات وإضاءة مصممة لوضوح الرؤية.">Dimensional letters, logo signs and lighting designed for clear visibility.</p></article>
+          <article class="service"><div class="service-top"><span class="service-num">03 / IDENTITY</span><span class="service-mark" aria-hidden="true">⌘</span></div><h3 data-en="Architectural branding" data-ar="الهوية المعمارية">Architectural branding</h3><p data-en="A considered connection between brand strategy, signage and built space." data-ar="ربط مدروس بين استراتيجية العلامة التجارية واللافتات والمكان.">A considered connection between brand strategy, signage and built space.</p></article>
+          <article class="service"><div class="service-top"><span class="service-num">04 / VISUALS</span><span class="service-mark" aria-hidden="true">◇</span></div><h3 data-en="Creative design & 3D" data-ar="التصميم الإبداعي وثلاثي الأبعاد">Creative design & 3D</h3><p data-en="Visual direction and realistic presentations that make the idea easier to understand." data-ar="رؤية بصرية وعروض واقعية تجعل الفكرة أوضح وأسهل في التقييم.">Visual direction and realistic presentations that make the idea easier to understand.</p></article>
+          <article class="service"><div class="service-top"><span class="service-num">05 / TECHNICAL</span><span class="service-mark" aria-hidden="true">⌗</span></div><h3 data-en="Shop drawings" data-ar="الرسومات التنفيذية">Shop drawings</h3><p data-en="Fabrication-ready drawings, panel layouts and clear installation details." data-ar="رسومات جاهزة للتصنيع وتوزيع الألواح وتفاصيل تركيب واضحة.">Fabrication-ready drawings, panel layouts and clear installation details.</p></article>
+          <article class="service"><div class="service-top"><span class="service-num">06 / DELIVERY</span><span class="service-mark" aria-hidden="true">↘</span></div><h3 data-en="Fabrication & installation" data-ar="التصنيع والتركيب">Fabrication & installation</h3><p data-en="Coordinated production and site work with attention to finish and fit." data-ar="تصنيع وتنفيذ منسق في الموقع مع عناية بالتشطيب ودقة التركيب.">Coordinated production and site work with attention to finish and fit.</p></article>
         </div>
       </div>
     </section>
 
-    <section id="about">
+    <section class="section about" id="about">
       <div class="wrap about-grid">
-        <div><div class="eyebrow">About Concept Grid</div><h2>From concept<br>to construction.</h2></div>
-        <div class="about-copy">
-          <p>CONCEPT GRID is a design-and-execution focused brand for facade and signage solutions. We bring creative direction, technical thinking, and practical production together to help commercial spaces express their identity with confidence.</p>
-          <p>Our approach connects the visual idea with the details that make it buildable — helping projects move from concept to a clear, coordinated result.</p>
-          <div class="pill-row"><span class="pill">Design-led</span><span class="pill">Technical precision</span><span class="pill">Built environments</span><span class="pill">End-to-end thinking</span></div>
+        <div>
+          <div class="eyebrow" data-en="The CONCEPT GRID approach" data-ar="منهج CONCEPT GRID">The CONCEPT GRID approach</div>
+          <h2><span data-en="Good ideas" data-ar="الأفكار الجيدة">Good ideas</span><em data-en="need a way to stand." data-ar="تحتاج إلى تنفيذ قوي.">need a way to stand.</em></h2>
+          <div class="about-copy">
+            <p data-en="CONCEPT GRID brings design thinking and practical execution into the same conversation. We look at how a facade, sign or branded environment should look — and how it will actually be made, fixed and finished." data-ar="تجمع CONCEPT GRID بين التفكير التصميمي والتنفيذ العملي. نهتم بالشكل الذي يجب أن تظهر به الواجهة أو اللافتة أو المساحة التجارية، وبكيفية تصنيعها وتثبيتها وتشطيبها فعلياً.">CONCEPT GRID brings design thinking and practical execution into the same conversation. We look at how a facade, sign or branded environment should look — and how it will actually be made, fixed and finished.</p>
+            <p data-en="The result is a more connected process: clear concepts, buildable details and a finished environment that expresses the brand with confidence." data-ar="النتيجة هي مسار عمل أكثر ترابطاً: أفكار واضحة وتفاصيل قابلة للتنفيذ ومساحة نهائية تعبّر عن العلامة بثقة.">The result is a more connected process: clear concepts, buildable details and a finished environment that expresses the brand with confidence.</p>
+          </div>
+          <div class="tag-row"><span class="tag" data-en="Design-led" data-ar="التصميم أولاً">Design-led</span><span class="tag" data-en="Technically considered" data-ar="دقة فنية">Technically considered</span><span class="tag" data-en="Built to last" data-ar="تنفيذ مدروس">Built to last</span></div>
+        </div>
+        <div class="about-visual">
+          <img src="assets/projects/3.jpg" alt="Concept Grid exhibition and spatial design project" loading="lazy">
+          <div class="about-index"><strong>CG / 02</strong><span data-en="From idea to installation" data-ar="من الفكرة إلى التركيب">From idea to installation</span></div>
         </div>
       </div>
     </section>
 
-    <section id="projects">
+    <section class="section projects" id="projects">
       <div class="wrap">
         <div class="section-head">
-          <div><div class="eyebrow">Selected work</div><h2>Made to be seen.</h2></div>
-          <p>A selection of our facade, signage, and technical work.</p>
+          <div><div class="eyebrow" data-en="A selection of our work" data-ar="نماذج من أعمالنا">A selection of our work</div><h2><span data-en="Made to be" data-ar="صُممت لتكون">Made to be</span> <em data-en="noticed." data-ar="ملحوظة.">noticed.</em></h2></div>
+          <p data-en="Facades, signs and branded structures — selected examples of design meeting real-world execution." data-ar="واجهات ولافتات وهياكل تحمل هوية العلامة؛ نماذج مختارة تجمع التصميم بالتنفيذ على أرض الواقع.">Facades, signs and branded structures — selected examples of design meeting real-world execution.</p>
         </div>
-        <div class="projects-grid">
-          <article class="project"><img src="assets/projects/1.jpeg" alt="" loading="lazy" onerror="this.remove()"><span>01 / Exterior</span><h3>Facade Cladding</h3></article>
-          <article class="project"><img src="assets/projects/2.jpeg" alt="" loading="lazy" onerror="this.remove()"><span>02 / Signage</span><h3>Illuminated Letters</h3></article>
-          <article class="project"><img src="assets/projects/3.jpg" alt="" loading="lazy" onerror="this.remove()"><span>03 / Spatial</span><h3>Exhibition Design</h3></article>
-          <article class="project"><img src="assets/projects/4.jpeg" alt="" loading="lazy" onerror="this.remove()"><span>04 / OUTDOOR STRUCTURES</span><h3>CLADDING PERGOLAS</h3></article>
-          <article class="project"><img src="assets/projects/5.jpeg" alt="" loading="lazy" onerror="this.remove()"><span>05 / STRUCTURES</span><h3>CANOPY</h3></article>
-          <article class="project"><img src="assets/projects/6.jpeg" alt="" loading="lazy" onerror="this.remove()"><span>06 / RETAIL</span><h3>KIOSK</h3></article>
-          <article class="project"><img src="assets/projects/7.jpeg" alt="" loading="lazy" onerror="this.remove()"><span>07 / COMMERCIAL</span><h3>NEXT & GO</h3></article>
-          <article class="project"><img src="assets/projects/8.jpeg" alt="" loading="lazy" onerror="this.remove()"><span>08 / COMMERCIAL</span><h3>CAR SERVICE</h3></article>
+        <div class="project-grid">
+          <article class="project"><img src="assets/projects/1.jpeg" alt="Facade cladding project" loading="lazy"><span class="project-arrow" aria-hidden="true">↗</span><div class="project-info"><span data-en="01 / Exterior systems" data-ar="01 / أنظمة الواجهات">01 / Exterior systems</span><h3 data-en="Facade cladding" data-ar="تجليد الواجهات">Facade cladding</h3></div></article>
+          <article class="project"><img src="assets/projects/2.jpeg" alt="Illuminated 3D signage project" loading="lazy"><span class="project-arrow" aria-hidden="true">↗</span><div class="project-info"><span data-en="02 / Signage" data-ar="02 / اللافتات">02 / Signage</span><h3 data-en="Illuminated letters" data-ar="حروف مضيئة">Illuminated letters</h3></div></article>
+          <article class="project"><img src="assets/projects/3.jpg" alt="Exhibition booth and spatial design" loading="lazy"><span class="project-arrow" aria-hidden="true">↗</span><div class="project-info"><span data-en="03 / Spatial design" data-ar="03 / تصميم المساحات">03 / Spatial design</span><h3 data-en="Exhibition design" data-ar="تصميم المعارض">Exhibition design</h3></div></article>
+          <article class="project"><img src="assets/projects/4.jpeg" alt="Cladding pergola project" loading="lazy"><span class="project-arrow" aria-hidden="true">↗</span><div class="project-info"><span data-en="04 / Outdoor structures" data-ar="04 / هياكل خارجية">04 / Outdoor structures</span><h3 data-en="Cladding pergolas" data-ar="برجولات كلادينج">Cladding pergolas</h3></div></article>
+          <article class="project"><img src="assets/projects/5.jpeg" alt="Architectural canopy project" loading="lazy"><span class="project-arrow" aria-hidden="true">↗</span><div class="project-info"><span data-en="05 / Structures" data-ar="05 / الهياكل">05 / Structures</span><h3 data-en="Canopy" data-ar="مظلة">Canopy</h3></div></article>
+          <article class="project"><img src="assets/projects/6.jpeg" alt="Retail kiosk design and execution" loading="lazy"><span class="project-arrow" aria-hidden="true">↗</span><div class="project-info"><span data-en="06 / Retail" data-ar="06 / تجاري">06 / Retail</span><h3 data-en="Kiosk" data-ar="كشك">Kiosk</h3></div></article>
+          <article class="project"><img src="assets/projects/7.jpeg" alt="Next and Go commercial branding" loading="lazy"><span class="project-arrow" aria-hidden="true">↗</span><div class="project-info"><span data-en="07 / Commercial" data-ar="07 / تجاري">07 / Commercial</span><h3 data-en="Next & Go" data-ar="Next & Go">Next & Go</h3></div></article>
+          <article class="project"><img src="assets/projects/8.jpeg" alt="Automotive service commercial facade" loading="lazy"><span class="project-arrow" aria-hidden="true">↗</span><div class="project-info"><span data-en="08 / Commercial" data-ar="08 / تجاري">08 / Commercial</span><h3 data-en="Car service" data-ar="خدمات سيارات">Car service</h3></div></article>
         </div>
-        <div class="actions"><a class="btn primary" href="https://www.behance.net/tarekhunter" target="_blank" rel="noopener">View full portfolio on Behance ↗</a></div>
+        <div class="projects-foot">
+          <p data-en="Want to see more detail, experiments and project development?" data-ar="هل ترغب في مشاهدة تفاصيل وتجارب ومراحل تطوير المزيد من المشاريع؟">Want to see more detail, experiments and project development?</p>
+          <a class="btn" href="https://www.behance.net/tarekhunter" target="_blank" rel="noopener noreferrer"><span data-en="View the full portfolio" data-ar="شاهد البورتفوليو الكامل">View the full portfolio</span><span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
       </div>
     </section>
 
-    <section class="cta" id="contact">
-      <div class="wrap cta-inner">
-        <div><div class="eyebrow" style="color:#302900">Have a project in mind?</div><h2>Let's build something distinctive.</h2><p>Tell us what you are planning. Let's discuss the right solution for your space.</p></div>
-        <div class="contact-btns"><a class="btn alt" href="tel:+201003209239">Call us</a><a class="btn alt" href="mailto:cg.official.co@gmail.com">Email us</a><a class="btn wa" id="cWa" href="https://wa.me/201003209239" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path transform="translate(6 6) scale(.5)" fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></a></div>
+    <section class="section process" id="process">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow" data-en="From brief to built form" data-ar="من المتطلبات إلى التنفيذ">From brief to built form</div><h2 data-en="A clear way forward." data-ar="مسار واضح للتنفيذ.">A clear way forward.</h2></div>
+          <p data-en="Good delivery depends on the work before the work: alignment, coordination and decisions made at the right time." data-ar="يعتمد التنفيذ الجيد على ما يسبقه من فهم وتنسيق واتخاذ القرارات المناسبة في الوقت المناسب.">Good delivery depends on the work before the work: alignment, coordination and decisions made at the right time.</p>
+        </div>
+        <div class="process-grid">
+          <article class="process-step"><div class="step-label"><span>01</span><b data-en="Understand" data-ar="الفهم">Understand</b></div><h3 data-en="Define the intent" data-ar="تحديد الهدف">Define the intent</h3><p data-en="Clarify the site, scope, brand character, materials and practical constraints." data-ar="فهم الموقع ونطاق العمل وطابع العلامة والخامات والقيود العملية.">Clarify the site, scope, brand character, materials and practical constraints.</p></article>
+          <article class="process-step"><div class="step-label"><span>02</span><b data-en="Design & detail" data-ar="التصميم والتفاصيل">Design & detail</b></div><h3 data-en="Make it buildable" data-ar="تحويل الفكرة إلى حل قابل للتنفيذ">Make it buildable</h3><p data-en="Develop the concept into clear visuals, coordinated drawings and fabrication details." data-ar="تطوير الفكرة إلى تصورات واضحة ورسومات منسقة وتفاصيل تصنيع.">Develop the concept into clear visuals, coordinated drawings and fabrication details.</p></article>
+          <article class="process-step"><div class="step-label"><span>03</span><b data-en="Deliver" data-ar="التنفيذ">Deliver</b></div><h3 data-en="Build with precision" data-ar="تنفيذ بدقة">Build with precision</h3><p data-en="Coordinate fabrication and installation to achieve the intended finish on site." data-ar="تنسيق التصنيع والتركيب للوصول إلى التشطيب المطلوب في الموقع.">Coordinate fabrication and installation to achieve the intended finish on site.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-grid">
+        <div><div class="eyebrow" data-en="Have a project in mind?" data-ar="هل لديك مشروع؟">Have a project in mind?</div><h2 data-en="Let's give your space a stronger identity." data-ar="لنمنح مساحتك هوية أقوى.">Let's give your space a stronger identity.</h2><p data-en="Tell us what you are planning. We'll help map the right next step." data-ar="أخبرنا بما تخطط له، وسنساعدك في تحديد الخطوة التالية المناسبة.">Tell us what you are planning. We'll help map the right next step.</p></div>
+        <div class="contact-actions">
+          <a class="btn btn-dark" href="https://wa.me/201003209239" target="_blank" rel="noopener noreferrer"><span data-en="Discuss on WhatsApp" data-ar="ناقش مشروعك عبر واتساب">Discuss on WhatsApp</span><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="btn btn-outline" href="mailto:cg.official.co@gmail.com"><span data-en="Send an email" data-ar="أرسل بريداً إلكترونياً">Send an email</span><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="btn btn-outline" href="tel:+201003209239"><span data-en="Call the team" data-ar="اتصل بنا">Call the team</span><span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="wrap footer-inner">
-      <div class="footer-brand">CONCEPT <b>GRID</b></div>
-      <div>Facade & Signage Solutions</div>
-      <div>© <span id="year">2026</span> CONCEPT GRID. All rights reserved.</div>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-main">
+        <div><a class="brand" href="#top"><img src="assets/concept-grid-logo.png" alt=""><span class="brand-word">CONCEPT GRID<small style="color:#e5c21b" data-en="FACADE & SIGNAGE SOLUTIONS" data-ar="حلول الواجهات واللافتات">FACADE & SIGNAGE SOLUTIONS</small></span></a><p data-en="Architectural facades, illuminated signage and branded environments — connected from concept to execution." data-ar="واجهات معمارية ولافتات مضيئة ومساحات تحمل هوية العلامة؛ من الفكرة إلى التنفيذ.">Architectural facades, illuminated signage and branded environments — connected from concept to execution.</p></div>
+        <div class="footer-links"><a href="https://www.behance.net/tarekhunter" target="_blank" rel="noopener noreferrer">BEHANCE ↗</a><a href="mailto:cg.official.co@gmail.com">EMAIL ↗</a><a href="https://wa.me/201003209239" target="_blank" rel="noopener noreferrer">WHATSAPP ↗</a></div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="year">2026</span> <strong>CONCEPT GRID</strong>. <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span></span><span data-en="DESIGN / ENGINEERING / EXECUTION" data-ar="تصميم / هندسة / تنفيذ">DESIGN / ENGINEERING / EXECUTION</span></div>
     </div>
   </footer>
 
-<script>
-(()=>{
-// Arabic text: key = exact English text on the page. If you edit the English, update its key here too.
-const AR={
-"FACADE & SIGNAGE SOLUTIONS":"حلول الواجهات واللافتات",
-"Services":"الخدمات","About":"من نحن","Projects":"المشاريع","Contact":"تواصل",
-"Design · Engineering · Execution":"تصميم · هندسة · تنفيذ",
-"Ideas built":"أفكار مبنية","to stand out.":"لتتميّز.",
-"We transform concepts into distinctive architectural facades, illuminated signage, and branded spaces — from the first sketch to fabrication and installation.":"نحوّل الأفكار إلى واجهات معمارية مميزة ولافتات مضيئة ومساحات تحمل هوية علامتك — من أول رسمة وحتى التصنيع والتركيب.",
-"Explore our work ↘":"استكشف أعمالنا","Start a project ↗":"ابدأ مشروعك",
-"FACADE CLADDING / 3D ILLUMINATED LETTERS / SIGNAGE / INSTALLATION":"تجليد الواجهات / حروف مضيئة ثلاثية الأبعاد / لافتات / قدرة تنفيذية",
-"What we do":"ماذا نقدّم","One vision.":"رؤية واحدة.","Complete solutions.":"حلول متكاملة.",
-"Creative thinking meets technical precision to build a clear, consistent identity for your space.":"تفكير إبداعي ودقة تقنية لبناء هوية واضحة ومتّسقة لمساحتك.",
-"01 / EXTERIORS":"01 / الواجهات","Facade Cladding":"تجليد الواجهات",
-"Architectural cladding concepts, detailing, coordination, and installation-ready solutions.":"أفكار وتفاصيل وتنسيق لأعمال تجليد الواجهات، بحلول جاهزة للتركيب.",
-"02 / VISIBILITY":"02 / الظهور","Illuminated Signage":"اللافتات المضيئة",
-"3D illuminated letters, logo signs, and custom signage built to make brands visible.":"حروف مضيئة ثلاثية الأبعاد ولافتات شعارات ولافتات مخصصة تُظهر علامتك.",
-"03 / BRAND SPACE":"03 / مساحة العلامة","Architectural Branding":"الهوية المعمارية",
-"Connecting brand identity with the physical environment through considered design.":"نربط هوية العلامة بالمكان الحقيقي من خلال تصميم مدروس.",
-"04 / DESIGN":"04 / التصميم","Creative Design & 3D":"التصميم الإبداعي وثلاثي الأبعاد",
-"Visual concepts, presentations, and realistic visualization to communicate ideas clearly.":"أفكار بصرية وعروض ومجسمات واقعية توصّل الفكرة بوضوح.",
-"05 / TECHNICAL":"05 / الجانب الفني","Shop Drawings":"الرسومات التنفيذية",
-"Clear technical drawings and fabrication details to support accurate execution.":"رسومات فنية وتفاصيل تصنيع واضحة لتنفيذ دقيق.",
-"06 / DELIVERY":"06 / التسليم","Fabrication & Installation":"التصنيع والتركيب",
-"Coordinated production and on-site execution focused on quality and finish.":"إنتاج منسّق وتنفيذ في الموقع مع تركيز على الجودة والتشطيب.",
-"About Concept Grid":"عن Concept Grid","From concept":"من الفكرة","to construction.":"إلى التنفيذ.",
-"CONCEPT GRID is a design-and-execution focused brand for facade and signage solutions. We bring creative direction, technical thinking, and practical production together to help commercial spaces express their identity with confidence.":"CONCEPT GRID علامة تركّز على التصميم والتنفيذ في حلول الواجهات واللافتات. نجمع بين الرؤية الإبداعية والتفكير التقني والإنتاج العملي لنساعد المساحات التجارية على التعبير عن هويتها بثقة.",
-"Our approach connects the visual idea with the details that make it buildable — helping projects move from concept to a clear, coordinated result.":"نربط الفكرة البصرية بالتفاصيل التي تجعلها قابلة للتنفيذ، لينتقل المشروع من التصور إلى نتيجة واضحة ومنسّقة.",
-"Design-led":"يقودنا التصميم","Technical precision":"دقة تقنية","Built environments":"البيئات المبنية","End-to-end thinking":"رؤية شاملة من البداية للنهاية",
-"Selected work":"أعمال مختارة","Made to be seen.":"صُنعت لتُرى.",
-"A selection of our facade, signage, and technical work.":"نماذج من أعمالنا في الواجهات واللافتات والرسومات الفنية.",
-"01 / Exterior":"01 / خارجي","02 / Signage":"02 / لافتات","Illuminated Letters":"حروف مضيئة",
-"03 / Spatial":"03 / مساحات","Exhibition Design":"تصميم المعارض",
-"04 / OUTDOOR STRUCTURES":"04 / الهياكل الخارجية","CLADDING PERGOLAS":"تصنيع وتنفيذ البرجولات الكلادينج",
-"05 / STRUCTURES":"05 / الهياكل","CANOPY":"مظلة","06 / RETAIL":"06 / وحدات تجارية","KIOSK":"كشك","07 / COMMERCIAL":"07 / تجاري","08 / COMMERCIAL":"08 / تجاري","COMMERCIAL STORE":"متجر تجاري",
-"View full portfolio on Behance ↗":"شاهد البورتفوليو كاملاً على Behance",
-"Have a project in mind?":"هل لديك مشروع في ذهنك؟","Let's build something distinctive.":"لنبنِ شيئاً مميزاً.",
-"Tell us what you are planning. Let's discuss the right solution for your space.":"أخبرنا بما تخطط له، ولنختر معاً الحل المناسب لمساحتك.",
-"Call us":"اتصل بنا","Email us":"راسلنا بالبريد",
-"Facade & Signage Solutions":"حلول الواجهات واللافتات",
-"CONCEPT GRID. All rights reserved.":"CONCEPT GRID. جميع الحقوق محفوظة."
-};
-const $=id=>document.getElementById(id);
-const norm=t=>t.replace(/[\s\u00a0]+/g," ").trim();
-const nodes=[],tw=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
-for(let n;n=tw.nextNode();){const t=AR[norm(n.nodeValue)];if(t)nodes.push([n,n.nodeValue,t])}
-const WA=$("cWa").getAttribute("href");
-const MSG=["Hello CONCEPT GRID, I'd like to discuss a project.","أهلاً CONCEPT GRID، أودّ مناقشة مشروع."];
-function set(ar){
-  const d=document.documentElement;d.lang=ar?"ar":"en";d.dir=ar?"rtl":"ltr";
-  for(const [n,o,t] of nodes)n.nodeValue=ar?o.match(/^\s*/)[0]+t+o.match(/\s*$/)[0]:o;
-  $("lang").textContent=ar?"EN":"عربي";
-  document.title=ar?"CONCEPT GRID | حلول الواجهات واللافتات":"CONCEPT GRID | Facade & Signage Solutions";
-  $("cWa").href=WA+"?text="+encodeURIComponent(MSG[+ar]);
-}
-const nav=document.querySelector(".nav"),mb=$("menuBtn");
-mb.onclick=()=>mb.setAttribute("aria-expanded",nav.classList.toggle("open"));
-document.querySelectorAll("#menu a").forEach(a=>a.onclick=()=>{nav.classList.remove("open");mb.setAttribute("aria-expanded","false")});
-let saved;try{saved=localStorage.getItem("cg-lang")}catch(e){}
-set(saved?saved==="ar":/^ar/i.test(navigator.language||""));
-$("lang").onclick=()=>{const ar=document.documentElement.lang!=="ar";set(ar);try{localStorage.setItem("cg-lang",ar?"ar":"en")}catch(e){}};
-$("year").textContent=new Date().getFullYear();
-})();
-</script>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const nav = document.getElementById("siteNav");
+      const menuButton = document.getElementById("menuBtn");
+      const languageButton = document.getElementById("langBtn");
+      const originalTitle = "CONCEPT GRID — Built to make a mark";
+      const englishElements = Array.from(document.querySelectorAll("[data-en][data-ar]"));
+
+      function setLanguage(language) {
+        const isArabic = language === "ar";
+        root.lang = isArabic ? "ar" : "en";
+        root.dir = isArabic ? "rtl" : "ltr";
+        for (const element of englishElements) {
+          element.textContent = isArabic ? element.dataset.ar : element.dataset.en;
+        }
+        languageButton.textContent = isArabic ? "EN" : "عربي";
+        languageButton.setAttribute("aria-label", isArabic ? "Switch to English" : "التبديل إلى العربية");
+        menuButton.setAttribute("aria-label", isArabic ? "فتح القائمة" : "Open menu");
+        document.title = isArabic ? "CONCEPT GRID — حلول الواجهات واللافتات" : originalTitle;
+        try { localStorage.setItem("cg-language", language); } catch (_) {}
+      }
+
+      menuButton.addEventListener("click", () => {
+        const expanded = menuButton.getAttribute("aria-expanded") !== "true";
+        menuButton.setAttribute("aria-expanded", String(expanded));
+        nav.classList.toggle("is-open", expanded);
+      });
+
+      document.querySelectorAll("#menu a").forEach(link => link.addEventListener("click", () => {
+        nav.classList.remove("is-open");
+        menuButton.setAttribute("aria-expanded", "false");
+      }));
+
+      languageButton.addEventListener("click", () => {
+        setLanguage(root.lang === "ar" ? "en" : "ar");
+      });
+
+      let storedLanguage = "en";
+      try { storedLanguage = localStorage.getItem("cg-language") || "en"; } catch (_) {}
+      setLanguage(storedLanguage === "ar" ? "ar" : "en");
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+    })();
+  </script>
 </body>
 </html>
